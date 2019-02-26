@@ -223,3 +223,34 @@ $(window).on('load', function() {
 
 
 })(jQuery);
+$(function() {
+
+    $('#login-form-link').click(function(e) {
+		$("#login-form").delay(100).fadeIn(100);
+ 		$("#register-form").fadeOut(100);
+		$('#register-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+	$('#register-form-link').click(function(e) {
+		$("#register-form").delay(100).fadeIn(100);
+ 		$("#login-form").fadeOut(100);
+		$('#login-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+
+});
+var modalLogin = document.getElementById('modal-wrapper-login');
+window.onclick = function(event) {
+    if (event.target == modalLogin) {
+        modalLogin.style.display = "none";
+	}
+}
+
+var modalRegister = document.getElementById('modal-wrapper-register');
+window.onclick = function(event) {
+    if (event.target == modalRegister) {
+        modalLogin.style.display = "none";
+	}
+}

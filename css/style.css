@@ -2422,13 +2422,13 @@ input[type=text], input[type=password] {
     padding: 12px 20px;
     margin: 8px 26px;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid #cccccc;
     box-sizing: border-box;
 	font-size:16px;
 }
 
 /* Set a style for all buttons */
-button {
+.modal button {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
@@ -2438,7 +2438,7 @@ button {
     width: 90%;
 	font-size:20px;
 }
-button:hover {
+.modal button:hover {
     opacity: 0.8;
 }
 

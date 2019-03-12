@@ -1690,6 +1690,7 @@ ol {
 	font-size: 14px;
 	text-align: center;
 	background-color: transparent;
+	margin: 0;
 }
 
 .related-product-section {
@@ -2414,8 +2415,6 @@ ol {
 		display: none;
 	}
 }
-*{margin:0px; padding:0px; font-family:Helvetica, Arial, sans-serif;}
-
 /* Full-width input fields */
 input[type=text], input[type=password] {
     width: 90%;

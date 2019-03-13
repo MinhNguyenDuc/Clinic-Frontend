@@ -221,5 +221,71 @@ $(window).on('load', function() {
 	$('.product-pic-zoom').zoom();
 
 
+	$('modal-wrapper-register').on('')
 
 })(jQuery);
+$(function() {
+
+    $('#login-form-link').click(function(e) {
+		$("#login-form").delay(100).fadeIn(100);
+ 		$("#register-form").fadeOut(100);
+		$('#register-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+	$('#register-form-link').click(function(e) {
+		$("#register-form").delay(100).fadeIn(100);
+ 		$("#login-form").fadeOut(100);
+		$('#login-form-link').removeClass('active');
+		$(this).addClass('active');
+		e.preventDefault();
+	});
+
+});
+function toggleResetPswd(e){
+    e.preventDefault();
+    $('#logreg-forms .form-signin').toggle() // display:block or none
+    $('#logreg-forms .form-reset').toggle() // display:block or none
+}
+
+function toggleSignUp(e){
+    e.preventDefault();
+    $('#logreg-forms .form-signin').toggle(); // display:block or none
+    $('#logreg-forms .form-signup').toggle(); // display:block or none
+}
+
+$(()=>{
+    // Login Register Form
+    $('#logreg-forms #forgot_pswd').click(toggleResetPswd);
+    $('#logreg-forms #cancel_reset').click(toggleResetPswd);
+    $('#logreg-forms #btn-signup').click(toggleSignUp);
+    $('#logreg-forms #cancel_signup').click(toggleSignUp);
+})
+$(function(){
+    $('#showFormLogin').click(function() {
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			window.location.href = "file:///Users/minhnt-mac/Desktop/Clinic-Frontend/login-for-mobile.html#"
+		   }else {
+			document.getElementById('modal-wrapper-login').style.display='block'
+		   }
+    });
+});
+
+$(function(){
+    $('#showFormRegister').click(function() {
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			window.location.href = "file:///Users/minhnt-mac/Desktop/Clinic-Frontend/login-for-mobile.html#"
+		   }else {
+			document.getElementById('modal-wrapper-register').style.display='block'
+		   }
+    });
+});
+
+
+
+var modalRegister = document.getElementById('modal-wrapper-register');
+window.onclick = function(event) {
+		if (event.target == modalRegister) {
+			modalLogin.style.display = "none";
+		}
+}

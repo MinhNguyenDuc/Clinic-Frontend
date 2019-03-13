@@ -1,7 +1,10 @@
 
 var cart = []
 $(document).ready(function () {
-    cart = JSON.parse($.session.get("cart"))
+    if (JSON.parse($.session.get("cart")) != null){
+        cart = JSON.parse($.session.get("cart"))
+    }
+    
     drawCheckout();
     $(document).on('click', '.qtybtn', function () {
         var a = $(this).closest('.cart-item').find('.quantity');
@@ -54,7 +57,7 @@ function drawCheckout() {
                         </div>
                     </div>
                 </td>
-                <td class="total-col"><h4>${(cart[i].quantity * cart[i].price)}</h4></td>
+                <td class="total-col"><h4>${(cart[i].quantity * parseFloat(cart[i].price))}</h4></td>
             </tr>
         `;
 

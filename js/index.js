@@ -1,12 +1,13 @@
 
 var cart = []
 $(document).ready(function () {
-    cart = JSON.parse($.session.get("cart"));
     $('.add-card').on('click', function () {
         var pdId = $(this).attr('productID')
         var pdName = $('#product-' + pdId).find('#pd-name').text();
         var pdUrl = $('#product-' + pdId).find('img').attr('src');
         var pdPrice = $('#product-' + pdId).find('#pd-price').text();
+        pdPrice = pdPrice.replace('$','');
+        pdPrice = pdPrice.replace(',','.');
         var objItem = {
             id: pdId,
             name: pdName,

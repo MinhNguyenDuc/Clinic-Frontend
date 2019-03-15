@@ -45,7 +45,7 @@ function drawCheckout() {
                     <img src="${cart[i].url}" alt="">
                     <div class="pc-title">
                         <h4>${cart[i].name}</h4>
-                        <p>${cart[i].price}</p>
+                        <p>$${cart[i].price}</p>
                     </div>
                 </td>
                 <td class="quy-col">
@@ -57,7 +57,7 @@ function drawCheckout() {
                         </div>
                     </div>
                 </td>
-                <td class="total-col"><h4>${(cart[i].quantity * parseFloat(cart[i].price))}</h4></td>
+                <td class="total-col"><h4>$${(cart[i].quantity * parseFloat(cart[i].price))}</h4></td>
             </tr>
         `;
 
@@ -66,7 +66,7 @@ function drawCheckout() {
     }
     $('.total-cost').empty();
     var ckUnit = `
-        <h6>Tổng cộng <span>${totalMoney}</span></h6>
+        <h6>Tổng cộng <span>$${totalMoney}</span></h6>
     `
     $('.total-cost').append(ckUnit)
 }

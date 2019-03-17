@@ -24,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-	margin: 0;
+	margin: 0px;
 	color: #111111;
 	font-weight: 600;
 }
@@ -998,10 +998,9 @@ ol {
 /* ----------------
   Footer section
 ---------------------*/
-
 .footer-section {
 	background: #282828;
-	padding-top: 60px;
+	padding-top: 50px;
 }
 
 .footer-logo {
@@ -1122,7 +1121,7 @@ ol {
 
 .social-links-warp {
 	border-top: 2px solid #3b3535;
-	padding: 46px 0;
+	padding: 15px 0;
 }
 
 .social-links a {
@@ -2335,6 +2334,74 @@ ol {
 	}
 	.social-links a span {
 		display: none;
+	}
+
+	.social-links a {
+		margin-right: 60px;
+		display: inline-block;
+	}
+	
+	.social-links a:last-child {
+		margin-right: 0;
+	}
+	
+	.social-links a i {
+		font-size: 30px;
+		color: #d7d7d7;
+		float: left;
+		margin-right: 19px;
+		overflow: hidden;
+		-webkit-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	
+	.social-links a span {
+		display: inline-block;
+		font-size: 12px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: #9f9fa0;
+		padding-top: 10px;
+		-webkit-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	
+	.social-links a.instagram:hover i {
+		color: #2F5D84;
+	}
+	
+	.social-links a.google-plus:hover i {
+		color: #E04B37;
+	}
+	
+	.social-links a.twitter:hover i {
+		color: #5abed6;
+	}
+	
+	.social-links a.pinterest:hover i {
+		color: #CD212D;
+	}
+	
+	.social-links a.facebook:hover i {
+		color: #39599F;
+	}
+	
+	.social-links a.twitter:hover i {
+		color: #5abed6;
+	}
+	
+	.social-links a.youtube:hover i {
+		color: #D12227;
+	}
+	
+	.social-links a.tumblr:hover i {
+		color: #37475E;
+	}
+	
+	.social-links a:hover span {
+		color: #fff;
 	}
 	.cart-table,
 	.checkout-cart,
